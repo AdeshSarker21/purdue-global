@@ -1,0 +1,1351 @@
+/*============
+font-family: 'Poppins', sans-serif;
+=============*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Acumin Pro';
+}
+
+#wapper {
+    background: url(../images/bg.png)no-repeat scroll 0 0 / 100% 100%;
+}
+
+#bg-wapper {
+    background: #EAE7E3;
+}
+
+/*=========================================*/
+/*========Start Top Header Section========*/
+/*=========================================*/
+.top-header-section {
+    background: #555A60;
+    padding: 10px 0px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-header .logged-text {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top-header .logout-text {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 20px;
+}
+
+.top-header .logout-text:hover {
+    text-decoration: underline;
+}
+
+.top-header .cart-button {
+    border: none;
+    background: none;
+}
+
+.top-header .cart-button .cart-icon {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media all and (max-width:359px) {
+    .top-header .logged-text {
+        font-size: 14px;
+    }
+
+    .top-header .logout-text {
+        font-size: 14px;
+        margin: 0px 10px;
+    }
+}
+
+/*=========================================*/
+/*==========Start Header Section==========*/
+/*=========================================*/
+.mainHeaderArea {
+    background: #333134;
+    padding: 20px 0px;
+}
+
+.logoArea {}
+
+.logoArea .logoLink {
+    display: inline-block;
+}
+
+.logoArea .logoLink .logoImage {
+    height: auto;
+    width: 100%;
+}
+
+.maniMenuArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuArea .menuList {
+    padding: 0px 15px;
+}
+
+.menuArea .menuList .menuLink {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s;
+    border: 2px solid #CFB990;
+    padding: 6px 10px;
+}
+
+.menuArea .menuList .menuLink:hover {
+    border: 2px solid #fff;
+    background: #fff;
+    color: #000;
+}
+
+.maniMenuArea .logoLink {}
+
+.maniMenuArea .logoLink .responsiveLogo {
+    height: 78px;
+    width: 272px;
+}
+
+.maniMenuArea .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.maniMenuArea .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 30px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.maniMenuArea .menu-icon .navicon {
+    background: #CFB990;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 25px;
+}
+
+.maniMenuArea .menu-icon .navicon:before,
+.maniMenuArea .menu-icon .navicon:after {
+    background: #CFB990;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.maniMenuArea .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.maniMenuArea .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+.maniMenuArea .menu-btn {
+    display: none;
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu {
+    max-height: 270px;
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media (min-width: 992px) {
+    .maniMenuArea .menu-icon {
+        display: none;
+    }
+}
+
+@media all and (max-width:991px) {
+    .menuArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menuArea {
+        display: none;
+    }
+
+    .maniMenuArea {
+        display: unset;
+    }
+
+    .maniMenuArea .menu-btn:checked ~ .menuArea {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 50px;
+        padding-left: 10%;
+    }
+
+    .menuArea .menuList {
+        margin: 8px 0px;
+    }
+
+    .menuArea .menuList .menuLink {
+        width: 120px;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:577px) {
+    .maniMenuArea .logoLink .responsiveLogo {
+        height: auto;
+        width: 180px;
+    }
+}
+
+/*=========================================*/
+/*==========Start Breadcrumb Section==========*/
+/*=========================================*/
+.main-breadcrumb-section {
+    background: #CFB990;
+    padding: 15px 0px;
+}
+
+.breadcrumb {}
+
+.breadcrumb .breadcrumb-item {
+    font-size: 18px;
+    color: #333134;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.breadcrumb .breadcrumb-item .breadcrumb-link {
+    color: #333134;
+}
+
+/*=========================================*/
+/*==========Start Body Section==========*/
+/*=========================================*/
+.main-body-section {
+    padding: 90px 0px;
+}
+
+.body-heading {
+    text-align: center;
+}
+
+.form-wapper {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.body-heading .heading-welcome-text {
+    font-size: 60px;
+    color: #515151;
+    font-weight: 500;
+    line-height: 78px;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+.body-heading .heading-assets-text {
+    font-size: 78px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 78px;
+    text-transform: uppercase;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+.body-heading .shape {
+    height: auto;
+    width: 100%;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form .login-notes {
+    font-size: 23px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 27px;
+    font-family: 'Acumin Pro';
+    font-weight: 500;
+    padding: 40px 0px;
+}
+
+.form-group {
+    padding: 30px 0px;
+}
+
+.form-group .label-text {
+    font-size: 22px;
+    color: #fff;
+    line-height: 38px;
+    text-transform: uppercase;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+}
+
+.form-group .input-box {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    width: 290px;
+    margin: 0px 20px;
+}
+
+.form-group .domain-name {
+    font-size: 22px;
+    color: #fff;
+    line-height: 38px;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+}
+
+.d-flax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group .submit {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+    line-height: normal;
+    padding: 12px 22px;
+    border-radius: 5px;
+    border: none;
+    background: #CFB990;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.form-group .accoutn-text {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 38px;
+    padding-bottom: 15px;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+}
+
+.link-text {
+    font-weight: 500;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+    color: #cad8f0;
+}
+
+.custom-padding {
+    text-align: left;
+    padding-left: 32%;
+}
+
+@media only screen and (max-width: 1399px) and (min-width: 1200px) {
+    .body-heading .heading-assets-text {
+        font-size: 62px;
+    }
+
+    .custom-padding {
+        padding-left: 29%;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .form-wapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main-body-section {
+        padding: 20px 0px;
+    }
+
+    .custom-padding {
+        text-align: left;
+        padding-left: 32%;
+    }
+}
+
+@media all and (max-width:991px) {
+    .form-wapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main-body-section {
+        padding: 20px 0px;
+    }
+
+    .body-heading .heading-assets-text {
+        font-size: 51px;
+    }
+
+    .form-group .accoutn-text {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+        line-height: normal;
+        padding-bottom: 15px;
+    }
+
+    .custom-padding {
+        text-align: left;
+        padding-left: 26%;
+    }
+}
+
+@media all and (max-width:767px) {
+    .body-heading .heading-welcome-text {
+        font-size: 50px;
+    }
+
+    .body-heading .heading-assets-text {
+        font-size: 40px;
+    }
+
+    .login-form .login-notes {
+        font-size: 18px;
+        padding: 15px 0px;
+    }
+
+    .form-group .label-text {
+        font-size: 18px;
+    }
+
+    .custom-padding {
+        text-align: left;
+        padding-left: 18%;
+    }
+
+    .form-group .submit {
+        font-size: 17px;
+    }
+
+    .form-group .domain-name {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width:577px) {
+    .body-heading .heading-welcome-text {
+        font-size: 40px;
+        line-height: 30px;
+    }
+
+    .body-heading .heading-assets-text {
+        font-size: 35px;
+    }
+
+    .d-flax {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-group {
+        padding: 10px 0px;
+    }
+
+    .form-group .label-text {
+        font-size: 16px;
+    }
+
+    .form-group .domain-name {
+        font-size: 16px;
+    }
+
+    .form-group .input-box {
+        font-size: 16px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .custom-padding {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .form-group .accoutn-text {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width:480px) {
+    .body-heading .heading-welcome-text {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    .body-heading .heading-assets-text {
+        font-size: 30px;
+    }
+
+    .form-wapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .login-form .login-notes {
+        font-size: 16px;
+        padding: 15px 0px;
+    }
+}
+
+@media all and (max-width:355px) {
+    .body-heading .heading-welcome-text {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .body-heading .heading-assets-text {
+        font-size: 26px;
+    }
+}
+
+/*=========================================*/
+/*==========Start Footer Section==========*/
+/*=========================================*/
+.main-footer-area {
+    background: #555960;
+    padding: 10px 0px;
+}
+
+.footer-item {}
+
+.footer-item .footer-text {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .footer-item .footer-text {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width:991px) {
+    .footer-item .footer-text {
+        font-size: 12px;
+    }
+}
+
+/* ------------------------START HOME PAGE CSS------------------------------- */
+.button-item-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.button-item-area .button-list {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.2s;
+    border: 2px solid #CFB990;
+    padding: 10px 10px;
+    width: 350px;
+    margin-bottom: 20px;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+}
+
+.button-item-area .button-list:hover {
+    border: 2px solid #fff;
+    background: #fff;
+    color: #000;
+}
+
+.active-item {
+    border: 2px solid #fff !important;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+@media all and (max-width:380px) {
+    .button-item-area .button-list {
+        width: 100%;
+    }
+}
+
+/* ------------------------START FULL SCHOOL BROCHURES PAGE CSS------------------------------- */
+.main-body-section {}
+
+.full-school-brochures-area {}
+
+.full-school-brochures-area .heading-area {
+    padding-bottom: 75px;
+}
+
+.full-school-brochures-area .heading-area .heading-text {
+    font-size: 24px;
+    line-height: 38px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brochures-item {
+    flex-basis: 27%;
+    border-bottom: 3px solid #9D9795;
+    padding-bottom: 20px;
+}
+
+.brochures-item .brochures-image-area {
+    position: relative;
+}
+
+.brochures-item .brochures-image-area .brochures-img {
+    height: auto;
+    width: 100%;
+}
+
+.brochures-item .brochures-image-area .re-size-img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    cursor: w-resize;
+}
+
+.brochures-item .brochures-details-area {}
+
+.brochures-item .brochures-details-area .counter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.brochures-item .brochures-details-area .counter .inventory-text {
+    font-size: 17px;
+    line-height: 20px;
+    color: #333133;
+    font-weight: 400;
+    margin-right: 20px;
+    font-family: 'Acumin Pro';
+    font-weight: 600;
+}
+
+.brochures-item .brochures-details-area .counter .plus-button {
+    border: none;
+    background: none;
+}
+
+.brochures-item .brochures-details-area .counter .plus-button .plus-img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.brochures-item .brochures-details-area .details-text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #555960;
+    font-weight: 400;
+    font-family: 'Acumin Pro';
+    font-weight: 400;
+}
+
+@media all and (max-width:991px) {
+    .brochures-item {
+        flex-basis: 31%;
+    }
+
+    .brochures-item .brochures-image-area .re-size-img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .brochures-item .brochures-details-area .counter .plus-button .plus-img {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width:767px) {
+    .flex-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .brochures-item {
+        flex-basis: 100%;
+        margin-bottom: 70px;
+    }
+}
+
+/* ------------------------START CART PAGE CSS------------------------------- */
+.cart-notice-area {}
+
+.cart-notice-area .shopping-cart {
+    font-size: 24px;
+    line-height: 38px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+}
+
+.cart-notice-area .notice-text {
+    font-size: 20px;
+    line-height: 24px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: 500;
+}
+
+.button-flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.button-flex-box .cart-page-button-item {
+    font-size: 19px;
+    line-height: 30px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+    padding: 14px 15px;
+    border: 1px solid #333133;
+    border-radius: 5px;
+    background: none;
+}
+
+.cart-table {}
+
+.cart-table .table {}
+
+.cart-table .table .table-body {}
+
+.cart-table .table .table-body .body-row {}
+
+.cart-table .table .table-body .body-row .table-item {
+    padding-bottom: 15px;
+}
+
+.cart-table .table .table-body .body-row .table-item .deslect-icon {
+    height: 25px;
+    width: 25px;
+    margin-top: 35px;
+}
+
+.cart-table .table .table-body .body-row .table-item .cart-images {
+    height: auto;
+    width: 85px;
+}
+
+.cart-table .table .table-body .body-row .table-item .file-name {
+    font-size: 16px;
+    line-height: 19px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: 500;
+    padding-top: 40px;
+}
+
+.cart-table .table .table-body .body-row .table-item .qty-text {
+    font-size: 19px;
+    line-height: 22px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: 600;
+    padding: 0px 12px;
+    margin-top: 35px;
+}
+
+.cart-table .table .table-body .body-row .table-item .qty-input-box {
+    font-size: 19px;
+    line-height: 22px;
+    color: #fff;
+    font-family: 'Acumin Pro';
+    font-weight: 600;
+    background: #333133;
+    border: none;
+    width: 120px;
+    padding: 7px;
+    margin-top: 25px;
+}
+
+.cart-table .table .table-body .body-row .table-item .available-text {
+    font-size: 19px;
+    line-height: 22px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: 600;
+    padding: 0px 12px;
+    margin-top: 35px;
+}
+
+.cart-table .table .table-body .body-row .table-item .availabe-count {
+    font-size: 19px;
+    line-height: 22px;
+    color: #fff;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+    background: #333133;
+    border: none;
+    margin-top: 25px;
+    padding: 7px;
+    display: inline-block;
+}
+
+.sub-total-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.sub-total-area .amount .amount-text {
+    font-size: 24px;
+    line-height: 38px;
+    color: #333133;
+    font-family: 'Acumin Pro';
+    font-weight: 500;
+}
+
+.sub-total-area .checkout-button-area .checkout-button {
+    font-size: 19px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'Acumin Pro';
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #333133;
+    border: none;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .cart-notice-area .shopping-cart {
+        font-size: 21px;
+    }
+
+    .cart-notice-area .notice-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .button-flex-box .cart-page-button-item {
+        font-size: 17px;
+        padding: 10px 11px;
+    }
+}
+
+@media all and (max-width:991px) {
+    .cart-notice-area .shopping-cart {
+        font-size: 21px;
+    }
+
+    .cart-notice-area .notice-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .button-flex-box .cart-page-button-item {
+        font-size: 17px;
+        padding: 10px 11px;
+    }
+
+    .cart-table .table .table-body .body-row .table-item .qty-text {
+        font-size: 16px;
+    }
+
+    .cart-table .table .table-body .body-row .table-item .available-text {
+        font-size: 16px;
+    }
+
+    .sub-total-area .amount .amount-text {
+        font-size: 20px;
+    }
+
+    .sub-total-area .checkout-button-area .checkout-button {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width:767px) {
+    .sub-total-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0px;
+        flex-wrap: wrap;
+    }
+
+    .amount {
+        margin: 15px 0px;
+    }
+
+    .checkout-button-area {
+        margin: 15px 0px;
+    }
+}
+
+/* ------------------------START CHECKOUT PAGE CSS------------------------------- */
+.checkout-note-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.checkout-notes {
+    flex-basis: 80%;
+}
+
+.checkout-notes .request-note {
+    font-size: 24px;
+    line-height: 32px;
+    color: #333133;
+    font-weight: bold;
+    font-family: 'Acumin Pro';
+}
+
+.checkout-notes .change-notice {
+    font-size: 24px;
+    line-height: 32px;
+    color: #333133;
+    font-weight: 500;
+    font-family: 'Acumin Pro';
+}
+
+.checkout-notes .item-detalis {
+    font-size: 24px;
+    line-height: 32px;
+    color: #333133;
+    font-weight: bold;
+    font-family: 'Acumin Pro';
+    padding: 90px 0px 120px;
+}
+
+.checkout-notes .item-detalis .show-item-select {
+    font-weight: 500;
+}
+
+.next-item-button-area {
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.next-item-button-area .next-item-button {
+    font-size: 19px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Acumin Pro';
+    padding: 10px 30px;
+    background: #333133;
+    border-radius: 5px;
+    border: 1px solid #333133;
+}
+
+.next-item-button-area .next-item-button:hover {
+    color: #333133;
+    background: #fff;
+}
+
+.user-form-area {}
+
+.user-form-area .form-flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.user-form-area .form-flex-box .form-item {
+    flex-basis: 30%;
+}
+
+.user-form-area .form-flex-box .form-item .user-form-group {
+    margin-bottom: 25px;
+}
+
+.user-form-group .user-label-text {
+    font-size: 22px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: bold;
+    font-family: 'Acumin Pro';
+    margin-bottom: 7px;
+}
+
+.form-item .user-form-group .user-input-box {
+    font-size: 21px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: 400;
+    font-family: 'Acumin Pro';
+    width: 100%;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #CFB991;
+    border-radius: 5px;
+}
+
+.form-item .user-form-group .user-text-area {
+    font-size: 21px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: 400;
+    font-family: 'Acumin Pro';
+    width: 100%;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #CFB991;
+    border-radius: 5px;
+    resize: none;
+    height: 170px;
+}
+
+.form-item .user-form-group .example-text {
+    font-size: 22px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: 400;
+    font-family: 'Acumin Pro';
+    padding: 20px 0px;
+}
+
+.form-item .user-form-group .select-box {
+    font-size: 21px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: 400;
+    font-family: 'Acumin Pro';
+    width: 100%;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #CFB991;
+    border-radius: 5px;
+}
+
+.form-item .user-form-group .select-box .option-box {
+    font-size: 21px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: 400;
+    font-family: 'Acumin Pro';
+    width: 100%;
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #CFB991;
+    border-radius: 5px;
+}
+
+.custom-bg {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.form-item .drop-shop-heading {
+    font-size: 24px;
+    line-height: 38px;
+    color: #333133;
+    font-weight: bold;
+    font-family: 'Acumin Pro';
+    margin-bottom: 35px;
+}
+
+.submit-button-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.submit-button-area .submit-button-item {
+    font-size: 19px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Acumin Pro';
+    padding: 10px 30px;
+    background: #333133;
+    border-radius: 5px;
+    border: 1px solid #333133;
+    margin-left: 15px;
+}
+
+.submit-button-area .submit-button-item:hover {
+    color: #333133;
+    background: #fff;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .user-form-group .user-label-text {
+        font-size: 18px;
+    }
+
+    .user-form-area .form-flex-box .form-item {
+        flex-basis: 32%;
+    }
+
+    .form-item .drop-shop-heading {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .user-form-area .form-flex-box .form-item .user-form-group {
+        margin-bottom: 5px;
+    }
+
+    .checkout-notes .request-note {
+        font-size: 20px;
+    }
+
+    .checkout-notes .change-notice {
+        font-size: 20px;
+    }
+
+    .checkout-notes .item-detalis {
+        font-size: 20px;
+        padding: 40px 0px 70px;
+    }
+
+    .form-item .user-form-group .example-text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .form-item .user-form-group .user-input-box {
+        font-size: 19px;
+        padding: 3px 10px;
+    }
+}
+
+@media all and (max-width:991px) {
+    .checkout-note-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .checkout-notes {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+
+    .next-item-button-area {
+        flex-basis: 100%;
+        text-align: right;
+        margin-bottom: 60px;
+    }
+
+    .form-item .drop-shop-heading {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .checkout-notes .request-note {
+        font-size: 20px;
+    }
+
+    .checkout-notes .change-notice {
+        font-size: 20px;
+    }
+
+    .checkout-notes .item-detalis {
+        font-size: 20px;
+        padding: 40px 0px 70px;
+    }
+
+    .form-item .user-form-group .example-text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .form-item .user-form-group .user-input-box {
+        font-size: 19px;
+        padding: 3px 10px;
+    }
+
+    .checkout-notes .item-detalis {
+        font-size: 20px;
+        line-height: 32px;
+        padding: 50px 0px 50px;
+    }
+
+    .user-form-area .form-flex-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .user-form-area .form-flex-box .form-item {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+
+    .submit-button-area {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .submit-button-area .submit-button-item {
+        font-size: 17px;
+        padding: 10px 30px;
+        margin-left: 0;
+        margin-right: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+@media all and (max-width:577px) {
+    .form-item .drop-shop-heading {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .checkout-notes .request-note {
+        font-size: 18px;
+    }
+
+    .checkout-notes .change-notice {
+        font-size: 18px;
+    }
+
+    .checkout-notes .item-detalis {
+        font-size: 18px;
+        padding: 40px 0px 70px;
+    }
+
+    .form-item .user-form-group .example-text {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .form-item .user-form-group .user-input-box {
+        font-size: 17px;
+        padding: 3px 10px;
+    }
+
+    .checkout-notes .item-detalis {
+        font-size: 18px;
+        line-height: 32px;
+        padding: 50px 0px 50px;
+    }
+
+    .user-form-group .user-label-text {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .checkout-notes {
+        margin-bottom: 20px;
+    }
+}
